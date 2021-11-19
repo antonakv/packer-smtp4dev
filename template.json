@@ -31,7 +31,18 @@
       "destination": "/home/ubuntu/Rnwood.Smtp4dev-linux-x64-3.1.3-ci20211109103.zip"
     },
     {
+      "type": "file",
+      "source": "configs/smtp4dev.service",
+      "destination": "/home/ubuntu/smtp4dev.service"
+    },
+    {
       "scripts": ["scripts/packages.sh"
+      ],
+      "timeout": "10m",
+      "type": "shell"
+    },
+    {
+      "scripts": ["scripts/smtp4devinstall.sh"
       ],
       "timeout": "10m",
       "type": "shell"
