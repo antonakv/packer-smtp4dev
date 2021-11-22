@@ -21,4 +21,3 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get -y update ${APTARGS}
 
 sudo DEBIAN_FRONTEND=noninteractive apt-get -y install docker-ce=5:20.10.7~3-0~ubuntu-focal docker-ce-cli=5:20.10.7~3-0~ubuntu-focal containerd.io awscli ${APTARGS}
 # sudo DEBIAN_FRONTEND=noninteractive apt-get -y install containerd.io awscli ${APTARGS}
-

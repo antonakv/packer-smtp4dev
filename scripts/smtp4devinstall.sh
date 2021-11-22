@@ -6,3 +6,4 @@ chmod +x Rnwood.Smtp4dev
 sudo cp /home/ubuntu/smtp4dev.service /etc/systemd/system
 sudo systemctl daemon-reload
 sudo systemctl start smtp4dev.service
+sudo systemctl enable smtp4dev.service 
