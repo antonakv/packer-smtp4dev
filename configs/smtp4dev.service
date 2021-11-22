@@ -5,7 +5,7 @@ Conflicts=getty@tty1.service
 [Service]
 Type=simple
 WorkingDirectory=/home/ubuntu
-ExecStart=env -i /home/ubuntu/Rnwood.Smtp4dev
+ExecStart=env -i sudo /home/ubuntu/Rnwood.Smtp4dev
 StandardInput=tty-force
 RemainAfterExit=no
 Restart=on-failure
