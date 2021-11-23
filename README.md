@@ -22,4 +22,5 @@ packer build template.json
 Create EC2 instance using generated ami id
 
 smtp service is listening on the port 2525, tls is not supported
+
 web interface of the smtp4dev is available on the port 80
