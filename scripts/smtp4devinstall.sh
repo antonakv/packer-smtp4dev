@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
-
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+sudo systemctl enable docker
 cd /home/ubuntu
-unzip Rnwood.Smtp4dev-linux-x64-3.1.3-ci20211109103.zip
-chmod +x Rnwood.Smtp4dev
-sudo cp /home/ubuntu/smtp4dev.service /etc/systemd/system
-sudo systemctl daemon-reload
-sudo systemctl start smtp4dev.service
-sudo systemctl enable smtp4dev.service 
+sudo docker-compose up -d

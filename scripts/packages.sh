@@ -8,8 +8,6 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get update ${APTARGS}
 
 sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -y ${APTARGS}
 
-sudo DEBIAN_FRONTEND=noninteractive apt-get install -y ${APTARGS} unzip cloud-utils ctop htop git vim curl wget tar software-properties-common htop unattended-upgrades gpg-agent apt-transport-https ca-certificates thin-provisioning-tools net-tools 
-
 sudo unattended-upgrades -v
 
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
@@ -18,6 +16,8 @@ sudo echo \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 sudo DEBIAN_FRONTEND=noninteractive apt-get -y update ${APTARGS}
+
+sudo DEBIAN_FRONTEND=noninteractive apt-get -y install ${APTARGS} unzip cloud-utils ctop htop git vim curl wget tar software-properties-common htop unattended-upgrades gpg-agent apt-transport-https ca-certificates thin-provisioning-tools net-tools 
 
 sudo DEBIAN_FRONTEND=noninteractive apt-get -y install docker-ce=5:20.10.7~3-0~ubuntu-focal docker-ce-cli=5:20.10.7~3-0~ubuntu-focal containerd.io awscli ${APTARGS}
 # sudo DEBIAN_FRONTEND=noninteractive apt-get -y install containerd.io awscli ${APTARGS}
